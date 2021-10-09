@@ -12,7 +12,7 @@ namespace RegexUserRegistration
        // const string SUPPORTED_DOMAIN = "@bl.co.";
         const string EMAIL_ID = "^[A-Z0-9a-z]{1,}([.#$^_-][A-Za-z0-9]+)?[@][A-Za-z]{2,}[.][A-Za-z]{2,3}([.][a-zA-Z]{2})?$";
         const string PHN_NUM = "^([+][0-9]{2}\\s[6-9]{1}[0-9]{9}$)";
-        const string PASSWORD = "^.{8,}?$";
+        const string PASSWORD = "^[A-Z]{1}([1-9]{1,}?[a-zA-Z]{7,}?)$";
         // First Name Validation
         public void IsValidFirstName(string firstname)
         {
