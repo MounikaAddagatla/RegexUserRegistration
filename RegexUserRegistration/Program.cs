@@ -13,6 +13,8 @@ namespace RegexUserRegistration
             // for last name
             UserDetails lastName = new UserDetails();
             lastName.IsValidLastName("Addagatla");
+            UserDetails email = new UserDetails();
+            email.IsValidEmail("abc.xyz@bl.co.in");
             Console.ReadLine();
         }
     }
