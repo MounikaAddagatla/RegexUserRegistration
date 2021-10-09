@@ -10,7 +10,7 @@ namespace RegexUserRegistration
         const string FIRST_NAME = "^[A-Z]{1}[a-z]{3,}$";
         const string LAST_NAME = "^[A-Z]{1}[a-z]{3,}$";
        // const string SUPPORTED_DOMAIN = "@bl.co.";
-        const string EMAIL_ID = "^[A-Z0-9a-z]{1,}([.#$^_-][A-Za-z0-9]+)?[@][A-Za-z]{2,}[.][A-Za-z]{2,3}([.][a-zA-Z]{2})?$";
+        const string EMAIL_ID = "^[A-Z0-9a-z]+([.#$^_-][A-Za-z0-9]+)?[@][A-Za-z]{2,}[.][A-Za-z]{2,3}([.][a-zA-Z]{2})?$";
         const string PHN_NUM = "^([+][0-9]{2}\\s[6-9]{1}[0-9]{9}$)";
         const string PASSWORD = "^[A-Z]{1}([1-9]{1,}?[a-zA-Z]{1,}(?=.*[!*@#$%^&+=]).*?){1,}.{4,}?$";
         // First Name Validation
@@ -43,6 +43,7 @@ namespace RegexUserRegistration
                 return;
             }
             Console.WriteLine("EMAIL_ID is not validated");
+
         }
         // Phone Number 
         public void IsValidPhnNum(string phnNum)
@@ -60,6 +61,7 @@ namespace RegexUserRegistration
             if (Regex.IsMatch(passWord, PASSWORD))
             {
                 Console.WriteLine("PASSWORD is validated");
+              
                 return;
             }
             Console.WriteLine("PASSWORD is not validated");
