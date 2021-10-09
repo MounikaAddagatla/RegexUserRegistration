@@ -17,6 +17,8 @@ namespace RegexUserRegistration
             email.IsValidEmail("abc.xyz@bl.co.in");
             UserDetails phnNum = new UserDetails();
             phnNum.IsValidPhnNum("+91 6304727468");
+            UserDetails passWord = new UserDetails();
+            passWord.IsValidPassWord("12345678");
             Console.ReadLine();
         }
     }
