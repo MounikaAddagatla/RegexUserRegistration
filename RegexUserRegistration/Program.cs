@@ -18,7 +18,7 @@ namespace RegexUserRegistration
             UserDetails phnNum = new UserDetails();
             phnNum.IsValidPhnNum("+91 6304727468");
             UserDetails passWord = new UserDetails();
-            passWord.IsValidPassWord("A1asdfghj");
+            passWord.IsValidPassWord("A1assss@s");
             Console.ReadLine();
         }
     }
