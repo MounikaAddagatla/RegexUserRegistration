@@ -8,35 +8,41 @@ namespace RegexUserRegistration
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to User Registration");
-            // first name regex Validation//
-            UserDetails user = new UserDetails();
-            user.IsValidFirstName("Mounika");
-            // for last name        
-            user.IsValidLastName("Addagatla");
-            // for valid email
-            user.IsValidEmail("abc.xyz@bl.co.in");
-            // for valid phn number
-            user.IsValidPhnNum("+91 6304727468");
-            // for valid password 
-            user.IsValidPassWord("A1assss@s");
-            
-            /// reading data from the text file valid email id///
-            string filepath = @"E:\RegexUserRegistration\RegexUserRegistration\Emailds\IsValidEmail.txt";
-            using (StreamReader file = new StreamReader(filepath))
-            {
-                string ln;
-
-                while ((ln = file.ReadLine()) != null)
-                {
-                    UserDetails emailUser = new UserDetails();
-                    Console.WriteLine(ln+ " : ");
-                    user.IsValidEmail(ln);
-                    Console.WriteLine();
-                }
-                file.Close();
-
-            }
-            Console.ReadLine();
+            UserDetails userDetails = new UserDetails();
+            Console.WriteLine("Name To Enter");
+            string Name = Console.ReadLine();
+            Console.WriteLine("Last Name To Enter");
+            string LastName = Console.ReadLine();
+            Console.WriteLine("Email To Enter");
+            string Email = Console.ReadLine();
+            Console.WriteLine("Number to Enter using Country Code");
+            string Number = Console.ReadLine();
+            Console.WriteLine("Password To Enter ");
+            Console.WriteLine("1 . Must Have Atleat 8 character" + "\n" + "2 . One Character Should be in upper case" + "\n" + "3 . One character Should Be in Lower Case " + "\n" + "4 . One Special Character " + "\n" + "5. Should Have One Numberic Value");
+            string Password = Console.ReadLine();
+            if (userDetails.ToCheckName(Name) == true)
+                Console.WriteLine("Valid Input");
+            else
+                Console.WriteLine("InValid Input");
+            if (userDetails.ToCheckLastName(LastName) == true)
+                Console.WriteLine("Valid Input");
+            else
+                Console.WriteLine("InValid Input");
+            if (userDetails.ToCheckMail(Email) == true)
+                Console.WriteLine("Valid Input");
+            else
+                Console.WriteLine("InValid Input");
+            if (userDetails.ToCheckNumber(Number) == true)
+                Console.WriteLine("Vaild Input");
+            else
+                Console.WriteLine("Invalid Input");
+            if (userDetails.ToCheckPassword(Password) == true)
+                Console.WriteLine("Vaild Input");
+            else
+                Console.WriteLine("Invalid Input");
+                Console.ReadLine();
         }
+       
     }
+    
 }
